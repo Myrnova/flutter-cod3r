@@ -2,6 +2,8 @@
 //   return fn(a, b);
 // }
 
+import 'pessoa.dart';
+
 imprimirProduto(int qte, {String? nome, double? preco}) {
   //misturando parametros posicionais com parametros nomeados
   for (var i = 0; i < qte; i++)
@@ -21,6 +23,12 @@ class Produto {
 }
 
 main() {
+  var pessoa = Pessoa();
+  pessoa.nome = 'João';
+  pessoa.cpf = '1234678910';
+
+  print('O ${pessoa.nome} tem CPF ${pessoa.cpf}');
+
   var p1 = Produto(nome: 'Caneta');
   var p2 = Produto(nome: 'Lápis', preco: 4.99);
 
